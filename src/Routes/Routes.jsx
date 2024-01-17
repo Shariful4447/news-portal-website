@@ -15,6 +15,7 @@ import Register from "../Register/Register";
         {
           path: "/",
           element: <Home/>,
+          loader: () => fetch('news.json')
         },
         {
           path: "login",
