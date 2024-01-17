@@ -5,6 +5,13 @@ import Navbar from "../Pages/Shared/Navbar/Navbar";
 const Register = () => {
     const handleRegister = e =>{
         e.preventDefault();
+        e.preventDefault();
+        const form = new FormData(e.currentTarget)
+        const fullName = form.get('fullName');
+        const photoUrl = form.get('photoUrl');
+        const email = form.get('email');
+        const password = form.get('password');
+        console.log(fullName, photoUrl, email, password);
     }
     return (
         <div>
@@ -13,7 +20,7 @@ const Register = () => {
 
                 <div className="max-w-96 mx-auto text-center">
                     <div>
-                        <h2>Please login</h2>
+                        <h2>Please Register</h2>
                     </div>
                     <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
@@ -21,6 +28,10 @@ const Register = () => {
                             <span className="label-text">Full Name</span>
                         </label>  
                         <input type="text" name="fullName" placeholder="Eneter your full name" className="input input-bordered" required />
+                        <label className="label">
+                            <span className="label-text">Photo Url</span>
+                        </label>  
+                        <input type="text" name="photoUrl" placeholder="Eneter your Photo url" className="input input-bordered" required />                            
   
                         <label className="label">
                             <span className="label-text">Email</span>
