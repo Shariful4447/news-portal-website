@@ -20,7 +20,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
 
-                    <Link>
+                    <Link to="/login">
                         <button className="btn">Login</button>
                     </Link>
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
