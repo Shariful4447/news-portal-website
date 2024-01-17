@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
 
 
-const Login = () => {
-    const handleLogin = e =>{
+const Register = () => {
+    const handleRegister = e =>{
         e.preventDefault();
     }
     return (
@@ -15,8 +15,13 @@ const Login = () => {
                     <div>
                         <h2>Please login</h2>
                     </div>
-                    <form onSubmit={handleLogin} className="card-body">
+                    <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Full Name</span>
+                        </label>  
+                        <input type="text" name="fullName" placeholder="Eneter your full name" className="input input-bordered" required />
+  
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
@@ -32,14 +37,14 @@ const Login = () => {
                         </label>
                         </div>
                         <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn btn-primary">Create Account</button>
                         </div>
                     </form>
-                    <p>Dont have a account, <Link className="text-lime-500" to='/register'>Register Now</Link></p>   
+                    <p>Already have an account, <Link className="text-lime-500" to='/login'>Login now</Link></p>   
                 </div>    
 
         </div>
     );
 };
 
-export default Login;
+export default Register;
