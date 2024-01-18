@@ -9,7 +9,7 @@ const Register = () => {
     const handleRegister = e =>{
         e.preventDefault();
         e.preventDefault();
-        const form = new FormData(e.currentTarget)
+        // const form = new FormData(e.currentTarget)
         const fullName = form.get('fullName');
         const photoUrl = form.get('photoUrl');
         const email = form.get('email');
